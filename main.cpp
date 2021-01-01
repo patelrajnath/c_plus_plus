@@ -6,7 +6,6 @@
  */
 
 #include <iostream>
-
 #include "sorting/QuickSorting.h"
 #include "sorting/BubbleSorting.h"
 #include "sorting/SelectionSorting.h"
@@ -69,12 +68,12 @@ int main(int argc, char **argv) {
 
 	Sorting *sorting;
 	sorting = &qsort;
-	// sorting = &bsort;
+//	 sorting = &bsort;
 	// sorting = &isort;
 	// sorting = &ssort;
 
-	// sorting->sort(list, len);
-	sorting->sort(list, 0, len-1);
+	 sorting->sort(list, len);
+//	sorting->sort(list, 0, len-1);
 
 	cout << "The sorted list:" << endl;
 	sorting->printArray(list, len);

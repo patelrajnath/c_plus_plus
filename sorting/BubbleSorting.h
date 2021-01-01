@@ -15,7 +15,6 @@ public:
 	BubbleSorting();
 	virtual ~BubbleSorting();
 	void sort(int*, int);
-	void sort(int*, int, int){}
 };
 
 #endif /* BUBBLESORTING_H_ */

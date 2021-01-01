@@ -15,7 +15,6 @@ public:
 	SelectionSorting();
 	virtual ~SelectionSorting();
 	void sort(int*, int);
-	void sort(int*, int, int){}
 };
 
 #endif /* SELECTIONSORTING_H_ */

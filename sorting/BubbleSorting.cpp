@@ -22,7 +22,7 @@ void BubbleSorting::sort(int* list, int len){
 		bool no_swap = true;
 		for(int j = 0; j < len - 1; j++){
 			if(list[j] > list[j+1]){
-				swap(&list[j], &list[j+1]);
+				swap_elem(&list[j], &list[j+1]);
 				no_swap = false;
 			}
 		}

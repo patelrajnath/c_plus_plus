@@ -15,7 +15,6 @@ public:
 	InsertSorting();
 	virtual ~InsertSorting();
 	void sort(int*, int);
-	void sort(int*, int, int){}
 };
 
 #endif /* INSERTSORTING_H_ */

@@ -28,7 +28,7 @@ void SelectionSorting::sort(int* list, int len){
 				min_id = j;
 
 		// append the smallest element at the end of the sorted array
-		swap(&list[min_id], &list[i]);
+		swap_elem(&list[min_id], &list[i]);
 	}
 }
 
