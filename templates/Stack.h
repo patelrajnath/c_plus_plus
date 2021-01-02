@@ -19,9 +19,9 @@ private:
       vector<T> elems;    // elements
 
    public:
-      void push(T);  // push element
+      void push(T const&);  // push element
       void pop();               // pop element
-      T top();            // return top element
+      T top() const;            // return top element
 
       bool empty(){      // return true if empty.
          return elems.empty();
@@ -29,7 +29,7 @@ private:
 };
 
 template <class T>
-void Stack<T>::push (T elem) {
+void Stack<T>::push(T const& elem) { // T const&: Reference (&) to a constant (const) integer if T is int
    // append copy of passed element
    elems.push_back(elem);
 }
@@ -45,7 +45,7 @@ void Stack<T>::pop () {
 }
 
 template <class T>
-T Stack<T>::top (){
+T Stack<T>::top() const{
    if (elems.empty()) {
       throw out_of_range("Stack<>::top(): empty stack");
    }
