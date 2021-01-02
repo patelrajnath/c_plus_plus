@@ -24,7 +24,7 @@ public:
 
 private:
 	// Internal implementation class
-	class QuickSortingImpl;
+	struct QuickSortingImpl;
 
 	// Pointer to the internal implementation
 	unique_ptr<QuickSortingImpl> qsortImpl;

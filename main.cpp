@@ -13,6 +13,12 @@
 #include "area/Rectangle.h"
 #include "area/Triangle.h"
 #include "volume/Container.h"
+#include "templates/Stack.h"
+#include <vector>
+#include <cstdlib>
+#include <string>
+#include <stdexcept>
+
 
 using namespace std;
 
@@ -77,6 +83,25 @@ int main(int argc, char **argv) {
 
 	cout << "The sorted list:" << endl;
 	sorting->printArray(list, len);
+	try{
+		Stack<int> intStack;
+		Stack<string> strStack;
+
+		intStack.push(7);
+		cout << "The top elem: " << intStack.top() << endl;
+//		intStack.pop();
+//		cout << "The top elem: " << intStack.top() << endl;
+
+		strStack.push("hello");
+		cout << "The top elem: " << strStack.top() << endl;
+		strStack.pop();
+		cout << "The top elem: " << strStack.top() << endl;
+
+	}catch (exception const& ex) {
+		cerr << "Exception: " << ex.what() << endl;
+		      return -1;
+	}
+
 }
 
 
