@@ -5,8 +5,6 @@
  *      Author: rWX917587
  */
 #include <vector>
-#include <cstdlib>
-
 using namespace std;
 
 
@@ -16,12 +14,19 @@ using namespace std;
 template <class T>
 class Stack {
 private:
-      vector<T> elems;    // elements
+      vector<T> elems; // elements
 
    public:
-      void push(T const&);  // push element
-      void pop();               // pop element
-      T top() const;            // return top element
+      // push element
+      // T const&: Reference (&) to a constant (const) integer if T is int
+      void push(T const&);
+
+      // pop element
+      void pop();
+
+      // return top element; here "const" implies that this method is constant and
+      // can not change the memeber variable elems
+      T top() const;
 
       bool empty(){      // return true if empty.
          return elems.empty();
@@ -29,7 +34,7 @@ private:
 };
 
 template <class T>
-void Stack<T>::push(T const& elem) { // T const&: Reference (&) to a constant (const) integer if T is int
+void Stack<T>::push(T const& elem) {
    // append copy of passed element
    elems.push_back(elem);
 }
