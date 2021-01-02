@@ -84,7 +84,7 @@ int main(int argc, char **argv) {
 	cout << "The sorted list:" << endl;
 	sorting->printArray(list, len);
 
-	// Template based Stack implimentation
+	// Template based Stack implementation
 	try{
 		Stack<int> intStack;
 		Stack<string> strStack;
